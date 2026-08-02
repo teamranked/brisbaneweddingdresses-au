@@ -1,11 +1,10 @@
-/*
-   Bridehouse responsive layer
-   The page is an exported editorial design, so these overrides keep its
-   typography, palette and image-led character while removing desktop-only
-   constraints at tablet and phone widths.
-*/
+/* Bridehouse mobile system
+   The source page is an editorial desktop export. At phone widths we keep its
+   type, palette and generous feel, but replace desktop composition with a
+   deliberate single-column reading order. */
 
-html {
+html,
+body {
   overflow-x: hidden;
 }
 
@@ -13,211 +12,244 @@ html {
   body,
   x-dc,
   x-dc > div {
-    min-width: 0 !important;
     width: 100% !important;
+    min-width: 0 !important;
     max-width: 100% !important;
     overflow-x: hidden !important;
   }
 
-  x-dc > div > div {
-    min-width: 0 !important;
-  }
-
-  x-dc > div > div > div {
+  /* All page containers use the viewport as their only available width. */
+  x-dc [style*="max-width: 1360px"] {
+    width: 100% !important;
     max-width: none !important;
-    width: auto !important;
     margin-left: 0 !important;
     margin-right: 0 !important;
-    padding-left: 28px !important;
-    padding-right: 28px !important;
+    padding-left: 24px !important;
+    padding-right: 24px !important;
   }
 
-  /* The exported navigation becomes a compact, uncluttered mobile bar. */
-  x-dc > div > div:first-child > div:first-child {
-    height: auto !important;
-    min-height: 78px !important;
-    grid-template-columns: minmax(0, 1fr) auto !important;
-    gap: 16px !important;
-    padding-top: 16px !important;
-    padding-bottom: 16px !important;
+  /* Header: logo in the centre, one calm action on the right. */
+  x-dc > div > div:first-child {
+    position: sticky !important;
+    top: 0 !important;
+    z-index: 60 !important;
+  }
+
+  x-dc > div > div:first-child > div {
+    height: 72px !important;
+    min-height: 0 !important;
+    padding: 0 20px !important;
+    display: grid !important;
+    grid-template-columns: 1fr auto 1fr !important;
+    gap: 10px !important;
   }
 
   x-dc > div > div:first-child nav {
     display: none !important;
   }
 
-  x-dc > div > div:first-child > div:first-child > a {
-    grid-column: 1 !important;
+  x-dc > div > div:first-child > div > a[href="#top"] {
+    grid-column: 1 / 3 !important;
+    grid-row: 1 !important;
     justify-self: start !important;
+    text-align: left !important;
   }
 
-  x-dc > div > div:first-child > div:first-child > div {
-    grid-column: 2 !important;
-    gap: 12px !important;
+  x-dc > div > div:first-child > div > a[href="#top"] > div:first-child {
+    font-size: 18px !important;
+    letter-spacing: 0.14em !important;
+    line-height: 1 !important;
+    white-space: nowrap !important;
   }
 
-  x-dc > div > div:first-child > div:first-child > div > a[href="#faq"],
-  x-dc > div > div:first-child > div:first-child > div > a[href="#story"],
-  x-dc > div > div:first-child > div:first-child > div > a[href^="tel:"] {
+  x-dc > div > div:first-child > div > a[href="#top"] > div:last-child {
+    margin-top: 5px !important;
+    font-size: 7px !important;
+    letter-spacing: 0.27em !important;
+    white-space: nowrap !important;
+  }
+
+  x-dc > div > div:first-child > div > div:last-child {
+    grid-column: 3 !important;
+    grid-row: 1 !important;
+    justify-content: flex-end !important;
+    gap: 0 !important;
+  }
+
+  x-dc > div > div:first-child > div > div:last-child > a:not([href="#book"]) {
     display: none !important;
   }
 
   x-dc > div > div:first-child a[href="#book"] {
-    padding: 11px 15px !important;
+    display: inline-block !important;
+    padding: 12px 15px !important;
+    font-size: 10px !important;
+    letter-spacing: 0.18em !important;
+    white-space: nowrap !important;
+  }
+
+  /* Replace every desktop grid with a readable mobile stack. */
+  x-dc [style*="grid-template-columns"] {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 42px !important;
+  }
+
+  x-dc section,
+  x-dc footer {
+    min-width: 0 !important;
+    overflow: hidden !important;
+  }
+
+  x-dc section[style*="padding: 110px 0"],
+  x-dc section[style*="padding: 120px 0"],
+  x-dc section[style*="padding: 130px 0"] {
+    padding-top: 72px !important;
+    padding-bottom: 72px !important;
+  }
+
+  /* Hero: short intro, then image, then the supporting proof. */
+  x-dc section#top > div {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 0 !important;
+    min-height: 0 !important;
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+  }
+
+  x-dc section#top > div > div:first-child {
+    padding: 68px 0 54px !important;
+  }
+
+  x-dc section#top h1 {
+    max-width: 9.5em !important;
+    margin-bottom: 26px !important;
+    font-size: clamp(42px, 11vw, 56px) !important;
+    line-height: 0.98 !important;
+    letter-spacing: -0.02em !important;
+  }
+
+  x-dc section#top p {
+    font-size: 16px !important;
+    line-height: 1.65 !important;
+    margin-bottom: 30px !important;
+  }
+
+  x-dc section#top > div > div:first-child > div[style*="display: flex"] {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: stretch !important;
+    gap: 10px !important;
+    margin-bottom: 0 !important;
+  }
+
+  x-dc section#top > div > div:first-child > div[style*="display: flex"] > a {
+    width: 100% !important;
+    text-align: center !important;
+    padding: 16px 18px !important;
     font-size: 10px !important;
   }
 
-  /* Every major content wrapper becomes a single-column flow. */
-  x-dc section > div[style*="display: grid"],
-  x-dc > div > div[style*="display: grid"] {
-    grid-template-columns: minmax(0, 1fr) !important;
-    gap: 56px !important;
+  x-dc section#top > div > div:first-child > div[style*="repeat(3"] {
+    margin-top: 42px !important;
+    padding-top: 24px !important;
+    gap: 24px !important;
   }
 
-  x-dc [style*="grid-template-columns: repeat(5"],
-  x-dc [style*="grid-template-columns: repeat(4"],
-  x-dc [style*="grid-template-columns: repeat(3"] {
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+  x-dc section#top > div > div:last-child {
+    width: 100% !important;
+    height: auto !important;
+    min-height: 0 !important;
+    padding: 0 0 48px !important;
   }
 
-  x-dc [style*="display: flex"][style*="gap: 18px"],
-  x-dc [style*="display: flex"][style*="gap: 26px"],
-  x-dc [style*="display: flex"][style*="gap: 32px"] {
-    flex-wrap: wrap !important;
+  /* Image frames get a stable portrait ratio instead of desktop pixel heights. */
+  x-dc div:has(> image-slot) {
+    height: auto !important;
+    min-height: 0 !important;
+    aspect-ratio: 4 / 5 !important;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
   }
 
-  x-dc section {
+  x-dc section#top > div > div:last-child > div:has(> image-slot) {
+    aspect-ratio: 4 / 5 !important;
+  }
+
+  x-dc image-slot {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
     min-width: 0 !important;
-    overflow: hidden !important;
-    padding-top: 82px !important;
-    padding-bottom: 82px !important;
-  }
-
-  x-dc h1 {
-    font-size: clamp(44px, 8.5vw, 64px) !important;
-    line-height: 1.03 !important;
-  }
-
-  x-dc h2 {
-    font-size: clamp(36px, 6vw, 48px) !important;
-    line-height: 1.08 !important;
-  }
-
-  x-dc p {
     max-width: 100% !important;
   }
 
-  /* Scale fixed-height image frames without distorting their contents. */
-  x-dc [style*="height: 780px"],
-  x-dc [style*="height: 660px"],
-  x-dc [style*="height: 620px"],
-  x-dc [style*="height: 480px"],
-  x-dc [style*="height: 440px"],
-  x-dc [style*="height: 420px"],
-  x-dc [style*="height: 400px"],
-  x-dc [style*="height: 340px"],
-  x-dc [style*="height: 300px"],
-  x-dc [style*="height: 260px"],
-  x-dc [style*="height: 230px"] {
-    height: clamp(240px, 62vw, 520px) !important;
-  }
-
-  x-dc [style*="height: 150px"] {
-    height: 220px !important;
-    margin: 0 0 26px !important;
-  }
-
-  x-dc [style*="margin-top: 48px"],
-  x-dc [style*="margin-top: 60px"] {
-    margin-top: 0 !important;
+  /* Desktop caption cards become normal content below their image. */
+  x-dc section#top > div > div:last-child > div[style*="position: absolute"] {
+    position: static !important;
+    max-width: none !important;
+    margin: 18px 0 0 !important;
+    padding: 18px 0 0 18px !important;
   }
 
   x-dc [style*="position: sticky"] {
     position: static !important;
   }
 
-  image-slot {
-    display: block !important;
-    width: 100% !important;
-    min-width: 0 !important;
+  x-dc h2 {
+    font-size: clamp(36px, 9vw, 50px) !important;
+    line-height: 1.02 !important;
+  }
+
+  x-dc p {
     max-width: 100% !important;
   }
 
-  table {
+  x-dc table {
     display: block !important;
     overflow-x: auto !important;
     white-space: nowrap !important;
   }
-
-  table th,
-  table td {
-    padding-left: 16px !important;
-    padding-right: 16px !important;
-  }
 }
 
 @media (max-width: 600px) {
-  x-dc > div > div > div {
+  x-dc [style*="max-width: 1360px"] {
     padding-left: 20px !important;
     padding-right: 20px !important;
   }
 
-  x-dc section {
+  x-dc section[style*="padding: 110px 0"],
+  x-dc section[style*="padding: 120px 0"],
+  x-dc section[style*="padding: 130px 0"] {
     padding-top: 58px !important;
     padding-bottom: 58px !important;
   }
 
-  x-dc > div > div:first-child > div:first-child > a > div:first-child {
-    font-size: 20px !important;
-    letter-spacing: 0.14em !important;
+  x-dc section#top > div > div:first-child {
+    padding-top: 54px !important;
+    padding-bottom: 44px !important;
   }
 
-  x-dc > div > div:first-child > div:first-child > a > div:last-child {
-    font-size: 8px !important;
-    letter-spacing: 0.28em !important;
+  x-dc section#top h1 {
+    max-width: 10em !important;
+    font-size: clamp(39px, 10.5vw, 50px) !important;
+    line-height: 0.98 !important;
   }
 
-  x-dc h1 {
-    font-size: clamp(38px, 11.5vw, 52px) !important;
+  x-dc section#top > div > div:first-child > div[style*="repeat(3"] {
+    grid-template-columns: 1fr !important;
+    gap: 18px !important;
   }
 
-  x-dc h2 {
-    font-size: clamp(32px, 9vw, 42px) !important;
+  x-dc [style*="grid-template-columns"] {
+    gap: 32px !important;
   }
 
-  x-dc section > div[style*="display: grid"],
-  x-dc > div > div[style*="display: grid"] {
-    gap: 36px !important;
+  x-dc div:has(> image-slot) {
+    aspect-ratio: 4 / 5 !important;
   }
 
-  x-dc [style*="grid-template-columns: repeat(5"],
-  x-dc [style*="grid-template-columns: repeat(4"],
-  x-dc [style*="grid-template-columns: repeat(3"],
-  x-dc [style*="grid-template-columns: repeat(2"] {
-    grid-template-columns: minmax(0, 1fr) !important;
-  }
-
-  x-dc [style*="display: flex"][style*="gap: 18px"] > a,
-  x-dc [style*="display: flex"][style*="gap: 26px"] > a {
-    flex: 1 1 100% !important;
-    text-align: center !important;
-  }
-
-  x-dc [style*="height: 780px"],
-  x-dc [style*="height: 660px"],
-  x-dc [style*="height: 620px"],
-  x-dc [style*="height: 480px"],
-  x-dc [style*="height: 440px"],
-  x-dc [style*="height: 420px"],
-  x-dc [style*="height: 400px"],
-  x-dc [style*="height: 340px"],
-  x-dc [style*="height: 300px"],
-  x-dc [style*="height: 260px"],
-  x-dc [style*="height: 230px"] {
-    height: clamp(220px, 95vw, 430px) !important;
-  }
-
-  x-dc [style*="height: 150px"] {
-    height: 200px !important;
+  x-dc [style*="display: flex"] > a {
+    min-width: 0 !important;
   }
 }
