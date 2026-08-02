@@ -1,0 +1,727 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="anonymous" />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet" />
+<script src="./image-slot.js"></script>
+<style>
+  body { margin: 0; background: #FCFAF7; -webkit-font-smoothing: antialiased; min-width: 1440px; }
+  * { box-sizing: border-box; }
+  a { color: #9A7B4F; text-decoration: none; }
+  a:hover { color: #2B2521; }
+  details > summary { list-style: none; cursor: pointer; }
+  details > summary::-webkit-details-marker { display: none; }
+  details[open] .plus { transform: rotate(45deg); }
+  table { border-collapse: collapse; width: 100%; }
+  image-slot { min-width: 0 !important; max-width: 100%; }
+  image-slot::part(root) { min-width: 0; }
+</style>
+</helmet>
+
+<div style="font-family: 'Jost', sans-serif; color: #5E564D; background: #FCFAF7; overflow-x: hidden;">
+
+  <div style="position: sticky; top: 0; z-index: 60; background: rgba(252,250,247,0.94); backdrop-filter: blur(10px); border-bottom: 1px solid #E8E1D7;">
+    <div style="max-width: 1360px; margin: 0 auto; padding: 0 56px; height: 92px; display: grid; grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr); align-items: center; gap: 32px;">
+      <nav style="display: flex; gap: 30px; align-items: center;">
+        <a href="#collection" style="font-size: 12.5px; letter-spacing: 0.14em; text-transform: uppercase; color: #5E564D;">Wedding Dresses</a>
+        <a href="#services" style="font-size: 12.5px; letter-spacing: 0.14em; text-transform: uppercase; color: #5E564D;">Alterations</a>
+        <a href="#services" style="font-size: 12.5px; letter-spacing: 0.14em; text-transform: uppercase; color: #5E564D;">Couture</a>
+        <a href="#services" style="font-size: 12.5px; letter-spacing: 0.14em; text-transform: uppercase; color: #5E564D;">Accessories</a>
+      </nav>
+      <a href="#top" style="text-align: center; display: block; color: #2B2521;">
+        <div style="font-family: 'Cormorant Garamond', serif; font-size: 25px; font-weight: 400; letter-spacing: 0.22em; text-transform: uppercase; line-height: 1;">The Bridehouse</div>
+        <div style="font-size: 9.5px; letter-spacing: 0.44em; text-transform: uppercase; color: #9A7B4F; margin-top: 6px;">Bulimba · Est. Brisbane</div>
+      </a>
+      <div style="display: flex; gap: 26px; align-items: center; justify-content: flex-end;">
+        <a href="#faq" style="font-size: 12.5px; letter-spacing: 0.14em; text-transform: uppercase; color: #5E564D;">FAQ</a>
+        <a href="#story" style="font-size: 12.5px; letter-spacing: 0.14em; text-transform: uppercase; color: #5E564D;">About</a>
+        <a href="tel:0721459087" style="font-size: 12.5px; letter-spacing: 0.14em; color: #5E564D;">(07) 2145 9087</a>
+        <a href="#book" style="background: #2B2521; color: #FCFAF7; padding: 13px 24px; font-size: 11.5px; letter-spacing: 0.2em; text-transform: uppercase;" style-hover="background: #9A7B4F;">Book</a>
+      </div>
+    </div>
+  </div>
+
+  <section id="top" style="background: #FCFAF7; padding: 0;">
+    <div style="max-width: 1360px; margin: 0 auto; padding: 0 56px; display: grid; grid-template-columns: minmax(0, 1.02fr) minmax(0, 0.98fr); gap: 80px; align-items: center; min-height: 780px;">
+      <div style="padding: 96px 0;">
+        <div style="font-size: 11.5px; letter-spacing: 0.32em; text-transform: uppercase; color: #9A7B4F; margin-bottom: 30px;">Wedding Dresses Brisbane · Bulimba</div>
+        <h1 style="font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: 68px; line-height: 1.06; letter-spacing: -0.015em; color: #2B2521; margin: 0 0 30px; text-wrap: pretty;">Wedding dresses in Brisbane — designed, fitted and altered by the one <em style="font-style: italic; color: #9A7B4F;">Bulimba team</em></h1>
+        <p style="font-size: 17.5px; font-weight: 300; line-height: 1.72; color: #5E564D; margin: 0 0 40px; max-width: 560px; text-wrap: pretty;">One-on-one bridal consultations, a curated made-to-order collection, and on-site alterations, all under one Bulimba roof — so the same team that designs your gown is the team that gets it to fit.</p>
+        <div style="display: flex; gap: 18px; align-items: center; margin-bottom: 44px;">
+          <a href="#book" style="background: #2B2521; color: #FCFAF7; padding: 19px 38px; font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase;" style-hover="background: #9A7B4F;">Book my bridal consultation</a>
+          <a href="#book" style="border: 1px solid #C9BDAC; color: #2B2521; padding: 18px 32px; font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase;" style-hover="border-color: #2B2521;">Book an alteration consultation</a>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px; border-top: 1px solid #E8E1D7; padding-top: 30px; max-width: 640px;">
+          <div>
+            <div style="font-family: 'Cormorant Garamond', serif; font-size: 34px; color: #2B2521; line-height: 1;">10+</div>
+            <div style="font-size: 12.5px; font-weight: 300; line-height: 1.5; margin-top: 9px; color: #736A5E;">years of bridal design experience — Gabrielle Spencer</div>
+          </div>
+          <div>
+            <div style="font-family: 'Cormorant Garamond', serif; font-size: 34px; color: #2B2521; line-height: 1;">30+</div>
+            <div style="font-size: 12.5px; font-weight: 300; line-height: 1.5; margin-top: 9px; color: #736A5E;">years of bridal alterations experience — Anna Edmonds</div>
+          </div>
+          <div>
+            <div style="font-family: 'Cormorant Garamond', serif; font-size: 34px; color: #2B2521; line-height: 1;">Free</div>
+            <div style="font-size: 12.5px; font-weight: 300; line-height: 1.5; margin-top: 9px; color: #736A5E;">complimentary, no-obligation consultations, by appointment</div>
+          </div>
+        </div>
+      </div>
+      <div style="position: relative; height: 780px; padding: 56px 0;">
+        <image-slot id="bh-hero" shape="rect" fit="cover" placeholder="Hero portrait — bride in a Bridehouse gown, tall crop"></image-slot>
+        <div style="position: absolute; left: -56px; bottom: 104px; background: #FCFAF7; padding: 26px 30px; max-width: 258px; border-left: 2px solid #9A7B4F;">
+          <div style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 21px; line-height: 1.4; color: #2B2521;">Every gown is our own design, and we own the pattern.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background: #2B2521; color: #E5DED4;">
+    <div style="max-width: 1360px; margin: 0 auto; padding: 34px 56px; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 40px;">
+      <div style="font-size: 12.5px; letter-spacing: 0.13em; text-transform: uppercase; font-weight: 300;">More than 30 years in Brisbane bridal</div>
+      <div style="font-size: 12.5px; letter-spacing: 0.13em; text-transform: uppercase; font-weight: 300;">Design, fitting &amp; alterations under one roof</div>
+      <div style="font-size: 12.5px; letter-spacing: 0.13em; text-transform: uppercase; font-weight: 300;">Complimentary consultations, by appointment</div>
+      <div style="font-size: 12.5px; letter-spacing: 0.13em; text-transform: uppercase; font-weight: 300;">Family-owned and operated</div>
+    </div>
+  </section>
+
+  <section style="background: #F6F2EC; padding: 110px 0;">
+    <div style="max-width: 1360px; margin: 0 auto; padding: 0 56px; display: grid; grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: 100px; align-items: center;">
+      <div>
+        <div style="font-size: 11.5px; letter-spacing: 0.32em; text-transform: uppercase; color: #9A7B4F; margin-bottom: 24px;">Reviews</div>
+        <h2 style="font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: 46px; line-height: 1.14; color: #2B2521; margin: 0 0 26px; text-wrap: pretty;">What brides tell us matters most</h2>
+        <p style="font-size: 17px; font-weight: 300; line-height: 1.75; margin: 0 0 32px; text-wrap: pretty;">Every consultation is complimentary and comes with no obligation to book anything on the day — so what you hear from us is honest, not a sales pitch. We're happy to point you to our Google and Facebook profiles to read what recent brides have said in their own words, and we'd rather you judge us there than take our word for it here.</p>
+        <a href="#book" style="border-bottom: 1px solid #9A7B4F; padding-bottom: 5px; font-size: 12px; letter-spacing: 0.2em; text-transform: uppercase;">Read our reviews on Google →</a>
+      </div>
+      <div style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 22px;">
+        <div style="height: 300px;"><image-slot id="bh-rev-1" shape="rect" placeholder="Bride portrait or studio moment"></image-slot></div>
+        <div style="height: 300px; margin-top: 48px;"><image-slot id="bh-rev-2" shape="rect" placeholder="Detail shot — lace, beading, back of gown"></image-slot></div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background: #FCFAF7; padding: 84px 0; border-bottom: 1px solid #E8E1D7;">
+    <div style="max-width: 1180px; margin: 0 auto; padding: 0 56px; text-align: center;">
+      <h2 style="font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: 38px; line-height: 1.2; color: #2B2521; margin: 0 0 20px; text-wrap: pretty;">Bought your dress somewhere else? We've likely altered one just like it</h2>
+      <p style="font-size: 16.5px; font-weight: 300; line-height: 1.75; margin: 0 auto 40px; max-width: 780px; text-wrap: pretty;">Our alterations team has fitted gowns from these boutiques, among others. If your dress came from one that isn't listed here, bring it in for a complimentary consultation and we'll tell you honestly what's possible.</p>
+      <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 14px 40px;">
+        <div style="font-family: 'Cormorant Garamond', serif; font-size: 22px; letter-spacing: 0.06em; color: #8A8073;">Karen Willis Holmes</div>
+        <div style="font-family: 'Cormorant Garamond', serif; font-size: 22px; letter-spacing: 0.06em; color: #8A8073;">Grace Loves Lace</div>
+        <div style="font-family: 'Cormorant Garamond', serif; font-size: 22px; letter-spacing: 0.06em; color: #8A8073;">Made With Love</div>
+        <div style="font-family: 'Cormorant Garamond', serif; font-size: 22px; letter-spacing: 0.06em; color: #8A8073;">Luv Bridal</div>
+        <div style="font-family: 'Cormorant Garamond', serif; font-size: 22px; letter-spacing: 0.06em; color: #8A8073;">White Lily Couture</div>
+        <div style="font-family: 'Cormorant Garamond', serif; font-size: 22px; letter-spacing: 0.06em; color: #8A8073;">Sphere Bridal</div>
+        <div style="font-family: 'Cormorant Garamond', serif; font-size: 22px; letter-spacing: 0.06em; color: #8A8073;">Carte Blanche</div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background: #FCFAF7; padding: 120px 0;">
+    <div style="max-width: 1360px; margin: 0 auto; padding: 0 56px; display: grid; grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr); gap: 96px; align-items: center;">
+      <div style="height: 620px;"><image-slot id="bh-calm" shape="rect" placeholder="Calm boutique interior — rack of gowns, fitting room"></image-slot></div>
+      <div>
+        <div style="font-size: 11.5px; letter-spacing: 0.32em; text-transform: uppercase; color: #9A7B4F; margin-bottom: 24px;">The experience</div>
+        <h2 style="font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: 48px; line-height: 1.13; color: #2B2521; margin: 0 0 28px; text-wrap: pretty;">Wedding dress shopping should feel clear, not stressful</h2>
+        <p style="font-size: 17px; font-weight: 300; line-height: 1.78; margin: 0 0 22px; text-wrap: pretty;">Most brides walk in with a phone full of inspiration photos, an opinion from every bridesmaid, and no real idea what will actually suit them. Left too long, that uncertainty turns into a rushed decision two months out, or a gown that photographs beautifully but feels wrong the moment she has to dance in it.</p>
+        <p style="font-size: 17px; font-weight: 300; line-height: 1.78; margin: 0 0 36px; text-wrap: pretty;">At The Bridehouse Bulimba, we slow that down. You try different styles, get honest advice, and work out what feels right for you in a calm boutique setting, with the same team who can also fit and finish the dress once you've chosen it.</p>
+        <a href="#book" style="background: #2B2521; color: #FCFAF7; padding: 18px 34px; font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase; display: inline-block;" style-hover="background: #9A7B4F;">Book my bridal consultation</a>
+      </div>
+    </div>
+  </section>
+
+  <section style="background: #2B2521; color: #E5DED4; padding: 120px 0;">
+    <div style="max-width: 1360px; margin: 0 auto; padding: 0 56px; display: grid; grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr); gap: 96px; align-items: center;">
+      <div>
+        <div style="font-size: 11.5px; letter-spacing: 0.32em; text-transform: uppercase; color: #C0A276; margin-bottom: 24px;">Our patterns, our studio</div>
+        <h2 style="font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: 48px; line-height: 1.13; color: #FCFAF7; margin: 0 0 28px; text-wrap: pretty;">Why we can change almost anything about your dress</h2>
+        <p style="font-size: 17px; font-weight: 300; line-height: 1.78; margin: 0 0 22px; color: #CFC6B9; text-wrap: pretty;">Every gown in our collection is our own original design, and we own every pattern. That means a neckline, waistline, sleeve or fabric change isn't a request sent overseas to a manufacturer who's never met you — it's a conversation with the same studio that drew the pattern in the first place, for a small fee.</p>
+        <p style="font-size: 17px; font-weight: 300; line-height: 1.78; margin: 0; color: #CFC6B9; text-wrap: pretty;">It's also why our styling and our alterations happen under the one roof. The person who helped you choose your silhouette is working from the same pattern the alterations team uses to get it to fit exactly. Anna, who leads our alterations, has spent more than 30 years doing precisely this kind of work — she's seen almost every fit problem a gown can throw up, and she's usually already found the fix before you've finished explaining it.</p>
+      </div>
+      <div style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 20px;">
+        <div style="height: 420px;"><image-slot id="bh-pattern-1" shape="rect" placeholder="Pattern-making / workroom table"></image-slot></div>
+        <div style="height: 420px; margin-top: 60px;"><image-slot id="bh-pattern-2" shape="rect" placeholder="Hands pinning a gown at a fitting"></image-slot></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" style="background: #F6F2EC; padding: 120px 0;">
+    <div style="max-width: 1360px; margin: 0 auto; padding: 0 56px;">
+      <div style="max-width: 720px; margin-bottom: 64px;">
+        <div style="font-size: 11.5px; letter-spacing: 0.32em; text-transform: uppercase; color: #9A7B4F; margin-bottom: 24px;">What we do</div>
+        <h2 style="font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: 48px; line-height: 1.13; color: #2B2521; margin: 0; text-wrap: pretty;">Everything you need for your wedding day, in one Bulimba studio</h2>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px;">
+        <div style="grid-column: span 2; background: #FCFAF7; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);">
+          <div style="padding: 46px 44px;">
+            <div style="font-family: 'Cormorant Garamond', serif; font-size: 30px; color: #2B2521; margin-bottom: 16px;">Wedding dresses</div>
+            <p style="font-size: 15.5px; font-weight: 300; line-height: 1.7; margin: 0 0 24px;">Our own-label, made-to-order collection: A-line, ballgown, backless, basque waist, corset, off-the-shoulder, princess and floral silhouettes in lace, satin, crepe, beaded and tulle.</p>
+            <a href="#collection" style="font-size: 11.5px; letter-spacing: 0.2em; text-transform: uppercase; border-bottom: 1px solid #9A7B4F; padding-bottom: 4px;">View the collection →</a>
+          </div>
+          <div style="min-height: 340px;"><image-slot id="bh-svc-dress" shape="rect" placeholder="Signature gown, full length"></image-slot></div>
+        </div>
+        <div style="background: #FCFAF7; padding: 46px 40px; display: flex; flex-direction: column;">
+          <div style="height: 150px; margin: -46px -40px 30px;"><image-slot id="bh-svc-alt" shape="rect" placeholder="Alterations workroom"></image-slot></div>
+          <div style="font-family: 'Cormorant Garamond', serif; font-size: 30px; color: #2B2521; margin-bottom: 16px;">Bridal alterations</div>
+          <p style="font-size: 15.5px; font-weight: 300; line-height: 1.7; margin: 0 0 24px; flex: 1;">On-site fitting and finishing for Bridehouse gowns and gowns bought elsewhere or second-hand. Complimentary consultations.</p>
+          <a href="#book" style="font-size: 11.5px; letter-spacing: 0.2em; text-transform: uppercase; border-bottom: 1px solid #9A7B4F; padding-bottom: 4px; align-self: flex-start;">Book an alteration consultation →</a>
+        </div>
+        <div style="background: #FCFAF7; padding: 46px 40px; display: flex; flex-direction: column;">
+          <div style="height: 150px; margin: -46px -40px 30px;"><image-slot id="bh-svc-couture" shape="rect" placeholder="Couture sketch or bespoke gown"></image-slot></div>
+          <div style="font-family: 'Cormorant Garamond', serif; font-size: 30px; color: #2B2521; margin-bottom: 16px;">Gabrielle Spencer Couture</div>
+          <p style="font-size: 15.5px; font-weight: 300; line-height: 1.7; margin: 0 0 24px; flex: 1;">A fully bespoke gown designed, patterned and hand-finished for you, from $6,000 AUD. A small number of commissions accepted each year.</p>
+          <a href="#book" style="font-size: 11.5px; letter-spacing: 0.2em; text-transform: uppercase; border-bottom: 1px solid #9A7B4F; padding-bottom: 4px; align-self: flex-start;">Enquire about couture →</a>
+        </div>
+        <div style="background: #FCFAF7; padding: 46px 40px; display: flex; flex-direction: column;">
+          <div style="height: 150px; margin: -46px -40px 30px;"><image-slot id="bh-svc-custom" shape="rect" placeholder="Fabric swatches / neckline detail"></image-slot></div>
+          <div style="font-family: 'Cormorant Garamond', serif; font-size: 30px; color: #2B2521; margin-bottom: 16px;">Customisation</div>
+          <p style="font-size: 15.5px; font-weight: 300; line-height: 1.7; margin: 0 0 24px; flex: 1;">Change the neckline, waistline, sleeves or fabric on any collection gown, because we own the pattern.</p>
+          <a href="#book" style="font-size: 11.5px; letter-spacing: 0.2em; text-transform: uppercase; border-bottom: 1px solid #9A7B4F; padding-bottom: 4px; align-self: flex-start;">Ask about customisation →</a>
+        </div>
+        <div style="background: #FCFAF7; padding: 46px 40px; display: flex; flex-direction: column;">
+          <div style="height: 150px; margin: -46px -40px 30px;"><image-slot id="bh-svc-acc" shape="rect" placeholder="Veils, jewellery, accessories"></image-slot></div>
+          <div style="font-family: 'Cormorant Garamond', serif; font-size: 30px; color: #2B2521; margin-bottom: 16px;">Bridal accessories</div>
+          <p style="font-size: 15.5px; font-weight: 300; line-height: 1.7; margin: 0 0 24px; flex: 1;">Veils, capes and scarves, furs, jewellery, hair jewellery and flower girl dresses.</p>
+          <a href="#book" style="font-size: 11.5px; letter-spacing: 0.2em; text-transform: uppercase; border-bottom: 1px solid #9A7B4F; padding-bottom: 4px; align-self: flex-start;">Shop accessories →</a>
+        </div>
+      </div>
+      <div style="margin-top: 44px; text-align: center; font-size: 16px; font-weight: 300;">Not sure where to start? Call <a href="tel:0721459087" style="color: #2B2521; border-bottom: 1px solid #C9BDAC;">(07) 2145 9087</a> or <a href="#book" style="color: #2B2521; border-bottom: 1px solid #C9BDAC;">book a consultation</a> — we'll point you the right way.</div>
+    </div>
+  </section>
+
+  <section style="background: #FCFAF7; padding: 120px 0;">
+    <div style="max-width: 1360px; margin: 0 auto; padding: 0 56px;">
+      <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 52px; gap: 40px;">
+        <div>
+          <div style="font-size: 11.5px; letter-spacing: 0.32em; text-transform: uppercase; color: #9A7B4F; margin-bottom: 24px;">Find your shape</div>
+          <h2 style="font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: 48px; line-height: 1.13; color: #2B2521; margin: 0;">Browse by silhouette, neckline or fabric</h2>
+        </div>
+        <a href="#collection" style="font-size: 11.5px; letter-spacing: 0.2em; text-transform: uppercase; border-bottom: 1px solid #9A7B4F; padding-bottom: 4px; white-space: nowrap;">All gowns →</a>
+      </div>
+      <div style="font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; color: #A29684; margin-bottom: 22px;">Silhouette</div>
+      <div style="display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 20px;">
+        <sc-for list="{{ silhouettes }}" as="s" hint-placeholder-count="10">
+          <a href="#collection" style="display: block; color: #2B2521;">
+            <div style="height: 230px; margin-bottom: 12px;"><image-slot id="{{ s.id }}" shape="rect" placeholder="{{ s.name }}"></image-slot></div>
+            <div style="font-family: 'Cormorant Garamond', serif; font-size: 20px;">{{ s.name }}</div>
+          </a>
+        </sc-for>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 48px; margin-top: 60px; border-top: 1px solid #E8E1D7; padding-top: 44px;">
+        <div>
+          <div style="font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; color: #A29684; margin-bottom: 18px;">Neckline</div>
+          <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+            <a href="#collection" style="border: 1px solid #E0D8CC; padding: 10px 18px; font-size: 13.5px; color: #2B2521;" style-hover="border-color: #9A7B4F;">Boat neck</a>
+            <a href="#collection" style="border: 1px solid #E0D8CC; padding: 10px 18px; font-size: 13.5px; color: #2B2521;" style-hover="border-color: #9A7B4F;">Strapless</a>
+            <a href="#collection" style="border: 1px solid #E0D8CC; padding: 10px 18px; font-size: 13.5px; color: #2B2521;" style-hover="border-color: #9A7B4F;">Halter neck</a>
+          </div>
+        </div>
+        <div>
+          <div style="font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; color: #A29684; margin-bottom: 18px;">Fabric</div>
+          <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+            <a href="#collection" style="border: 1px solid #E0D8CC; padding: 10px 18px; font-size: 13.5px; color: #2B2521;" style-hover="border-color: #9A7B4F;">Lace</a>
+            <a href="#collection" style="border: 1px solid #E0D8CC; padding: 10px 18px; font-size: 13.5px; color: #2B2521;" style-hover="border-color: #9A7B4F;">Satin</a>
+            <a href="#collection" style="border: 1px solid #E0D8CC; padding: 10px 18px; font-size: 13.5px; color: #2B2521;" style-hover="border-color: #9A7B4F;">Beaded</a>
+            <a href="#collection" style="border: 1px solid #E0D8CC; padding: 10px 18px; font-size: 13.5px; color: #2B2521;" style-hover="border-color: #9A7B4F;">Crepe</a>
+            <a href="#collection" style="border: 1px solid #E0D8CC; padding: 10px 18px; font-size: 13.5px; color: #2B2521;" style-hover="border-color: #9A7B4F;">Tulle</a>
+          </div>
+        </div>
+        <div>
+          <div style="font-size: 11px; letter-spacing: 0.3em; text-transform: uppercase; color: #A29684; margin-bottom: 18px;">Occasion</div>
+          <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+            <a href="#collection" style="border: 1px solid #E0D8CC; padding: 10px 18px; font-size: 13.5px; color: #2B2521;" style-hover="border-color: #9A7B4F;">Beach</a>
+            <a href="#collection" style="border: 1px solid #E0D8CC; padding: 10px 18px; font-size: 13.5px; color: #2B2521;" style-hover="border-color: #9A7B4F;">Elopement</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background: #F6F2EC; padding: 120px 0;">
+    <div style="max-width: 1360px; margin: 0 auto; padding: 0 56px;">
+      <div style="max-width: 680px; margin-bottom: 56px;">
+        <div style="font-size: 11.5px; letter-spacing: 0.32em; text-transform: uppercase; color: #9A7B4F; margin-bottom: 24px;">Start here</div>
+        <h2 style="font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: 48px; line-height: 1.13; color: #2B2521; margin: 0;">Wherever you are in the process, we've got a way to help</h2>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px;">
+        <div style="background: #FCFAF7; display: flex; flex-direction: column;">
+          <div style="height: 260px;"><image-slot id="bh-path-1" shape="rect" placeholder="Bride browsing the rack"></image-slot></div>
+          <div style="padding: 40px; display: flex; flex-direction: column; flex: 1;">
+            <div style="font-family: 'Cormorant Garamond', serif; font-size: 28px; color: #2B2521; margin-bottom: 14px; line-height: 1.2;">Just starting your dress search</div>
+            <p style="font-size: 15.5px; font-weight: 300; line-height: 1.72; margin: 0 0 26px; flex: 1;">You've got a Pinterest board and no idea which silhouette actually suits you. Book a one-on-one consultation and try styles on with honest, pressure-free advice.</p>
+            <a href="#book" style="font-size: 11.5px; letter-spacing: 0.2em; text-transform: uppercase; border-bottom: 1px solid #9A7B4F; padding-bottom: 4px; align-self: flex-start;">Book a bridal consultation →</a>
+          </div>
+        </div>
+        <div style="background: #FCFAF7; display: flex; flex-direction: column;">
+          <div style="height: 260px;"><image-slot id="bh-path-2" shape="rect" placeholder="Fitting / pinning an existing gown"></image-slot></div>
+          <div style="padding: 40px; display: flex; flex-direction: column; flex: 1;">
+            <div style="font-family: 'Cormorant Garamond', serif; font-size: 28px; color: #2B2521; margin-bottom: 14px; line-height: 1.2;">Already have a gown that needs work</div>
+            <p style="font-size: 15.5px; font-weight: 300; line-height: 1.72; margin: 0 0 26px; flex: 1;">Bought it at another boutique, online, or second-hand? Our on-site alterations team fits gowns we didn't sell as often as ones we did.</p>
+            <a href="#book" style="font-size: 11.5px; letter-spacing: 0.2em; text-transform: uppercase; border-bottom: 1px solid #9A7B4F; padding-bottom: 4px; align-self: flex-start;">Book an alteration consultation →</a>
+          </div>
+        </div>
+        <div style="background: #FCFAF7; display: flex; flex-direction: column;">
+          <div style="height: 260px;"><image-slot id="bh-path-3" shape="rect" placeholder="Minimal, modern gown"></image-slot></div>
+          <div style="padding: 40px; display: flex; flex-direction: column; flex: 1;">
+            <div style="font-family: 'Cormorant Garamond', serif; font-size: 28px; color: #2B2521; margin-bottom: 14px; line-height: 1.2;">Looking for something quietly elegant</div>
+            <p style="font-size: 15.5px; font-weight: 300; line-height: 1.72; margin: 0 0 26px; flex: 1;">Not every bride wants tulle and beading. If you want refined, modern and comfortable rather than frilly, our collection and our couture service are both built around that.</p>
+            <a href="#collection" style="font-size: 11.5px; letter-spacing: 0.2em; text-transform: uppercase; border-bottom: 1px solid #9A7B4F; padding-bottom: 4px; align-self: flex-start;">View elegant styles →</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background: #FCFAF7; padding: 120px 0;">
+    <div style="max-width: 1360px; margin: 0 auto; padding: 0 56px; display: grid; grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr); gap: 90px;">
+      <div style="position: sticky; top: 132px; align-self: start;">
+        <div style="font-size: 11.5px; letter-spacing: 0.32em; text-transform: uppercase; color: #9A7B4F; margin-bottom: 24px;">Honest answers</div>
+        <h2 style="font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: 46px; line-height: 1.13; color: #2B2521; margin: 0 0 32px; text-wrap: pretty;">The specific bridal situations we deal with often</h2>
+        <div style="height: 340px;"><image-slot id="bh-situations" shape="rect" placeholder="Anna at work — alterations detail"></image-slot></div>
+      </div>
+      <div>
+        <div style="border-top: 1px solid #E8E1D7; padding: 34px 0; display: grid; grid-template-columns: 40px minmax(0, 1fr); gap: 24px;">
+          <div style="font-family: 'Cormorant Garamond', serif; font-size: 22px; color: #C0A276;">01</div>
+          <div>
+            <div style="font-family: 'Cormorant Garamond', serif; font-size: 27px; color: #2B2521; margin-bottom: 10px;">Second-hand or pre-loved gowns</div>
+            <p style="font-size: 16.5px; font-weight: 300; line-height: 1.75; margin: 0;">We alter dresses that never came from our studio, including second-hand finds. Bring it in for a complimentary look before you assume it can't be changed.</p>
+          </div>
+        </div>
+        <div style="border-top: 1px solid #E8E1D7; padding: 34px 0; display: grid; grid-template-columns: 40px minmax(0, 1fr); gap: 24px;">
+          <div style="font-family: 'Cormorant Garamond', serif; font-size: 22px; color: #C0A276;">02</div>
+          <div>
+            <div style="font-family: 'Cormorant Garamond', serif; font-size: 27px; color: #2B2521; margin-bottom: 10px;">Pregnancy or a change in body shape before the wedding</div>
+            <p style="font-size: 16.5px; font-weight: 300; line-height: 1.75; margin: 0;">It happens more than people think. We'll work with you honestly on what's achievable and when, given your timeline and your gown.</p>
+          </div>
+        </div>
+        <div style="border-top: 1px solid #E8E1D7; padding: 34px 0; display: grid; grid-template-columns: 40px minmax(0, 1fr); gap: 24px;">
+          <div style="font-family: 'Cormorant Garamond', serif; font-size: 22px; color: #C0A276;">03</div>
+          <div>
+            <div style="font-family: 'Cormorant Garamond', serif; font-size: 27px; color: #2B2521; margin-bottom: 10px;">Rush timelines</div>
+            <p style="font-size: 16.5px; font-weight: 300; line-height: 1.75; margin: 0;">We generally need 10 months to order and alter a new gown, but if your wedding is close, call us — rush orders are sometimes possible for a $250 fee, depending on the time of year.</p>
+          </div>
+        </div>
+        <div style="border-top: 1px solid #E8E1D7; padding: 34px 0; display: grid; grid-template-columns: 40px minmax(0, 1fr); gap: 24px;">
+          <div style="font-family: 'Cormorant Garamond', serif; font-size: 22px; color: #C0A276;">04</div>
+          <div>
+            <div style="font-family: 'Cormorant Garamond', serif; font-size: 27px; color: #2B2521; margin-bottom: 10px;">A gown you want changed</div>
+            <p style="font-size: 16.5px; font-weight: 300; line-height: 1.75; margin: 0 0 12px;">Because we own our patterns, customisation is a conversation, not a special request.</p>
+            <a href="#services" style="font-size: 11.5px; letter-spacing: 0.2em; text-transform: uppercase;">See customisation →</a>
+          </div>
+        </div>
+        <div style="border-top: 1px solid #E8E1D7; border-bottom: 1px solid #E8E1D7; padding: 34px 0; display: grid; grid-template-columns: 40px minmax(0, 1fr); gap: 24px;">
+          <div style="font-family: 'Cormorant Garamond', serif; font-size: 22px; color: #C0A276;">05</div>
+          <div>
+            <div style="font-family: 'Cormorant Garamond', serif; font-size: 27px; color: #2B2521; margin-bottom: 10px;">A fully bespoke gown</div>
+            <p style="font-size: 16.5px; font-weight: 300; line-height: 1.75; margin: 0 0 12px;">For brides who want a dress designed from a blank page.</p>
+            <a href="#services" style="font-size: 11.5px; letter-spacing: 0.2em; text-transform: uppercase;">See couture →</a>
+          </div>
+        </div>
+        <div style="background: #F6F2EC; padding: 40px 44px; margin-top: 44px;">
+          <div style="font-family: 'Cormorant Garamond', serif; font-size: 30px; color: #2B2521; margin-bottom: 14px;">Before you book</div>
+          <p style="font-size: 16.5px; font-weight: 300; line-height: 1.75; margin: 0;">We work by appointment only — there's no walk-in browsing, because every bride gets the studio's full attention for the hour she's booked in. We typically need 10 months to order and alter a new gown; if you're closer than that, call us before you assume it's too late. And if your budget sits well under our couture or made-to-order pricing, we'll tell you honestly rather than let you book in for nothing.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="collection" style="background: #F6F2EC; padding: 120px 0;">
+    <div style="max-width: 1360px; margin: 0 auto; padding: 0 56px;">
+      <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 56px; gap: 40px;">
+        <div style="max-width: 700px;">
+          <div style="font-size: 11.5px; letter-spacing: 0.32em; text-transform: uppercase; color: #9A7B4F; margin-bottom: 24px;">The collection</div>
+          <h2 style="font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: 48px; line-height: 1.13; color: #2B2521; margin: 0 0 20px;">A look inside the current collection</h2>
+          <p style="font-size: 16.5px; font-weight: 300; line-height: 1.75; margin: 0;">A selection of our current gowns, each shown in the fabric and silhouette it's made in, with a link through to the full details.</p>
+        </div>
+        <a href="#collection" style="font-size: 11.5px; letter-spacing: 0.2em; text-transform: uppercase; border-bottom: 1px solid #9A7B4F; padding-bottom: 4px; white-space: nowrap;">View the full collection →</a>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 24px;">
+        <sc-for list="{{ gowns }}" as="g" hint-placeholder-count="8">
+          <a href="#collection" style="display: block; color: #2B2521;">
+            <div style="height: 480px; margin-bottom: 16px;"><image-slot id="{{ g.id }}" shape="rect" placeholder="{{ g.name }}"></image-slot></div>
+            <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 12px;">
+              <div style="font-family: 'Cormorant Garamond', serif; font-size: 24px;">{{ g.name }}</div>
+              <div style="font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase; color: #A29684; text-align: right;">{{ g.detail }}</div>
+            </div>
+          </a>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section id="story" style="background: #FCFAF7; padding: 120px 0;">
+    <div style="max-width: 1360px; margin: 0 auto; padding: 0 56px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 96px; align-items: center;">
+      <div style="height: 660px;"><image-slot id="bh-story" shape="rect" placeholder="Gabrielle in the studio / archive portrait"></image-slot></div>
+      <div>
+        <div style="font-size: 11.5px; letter-spacing: 0.32em; text-transform: uppercase; color: #9A7B4F; margin-bottom: 24px;">Our story</div>
+        <h2 style="font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: 48px; line-height: 1.13; color: #2B2521; margin: 0 0 28px; text-wrap: pretty;">A Bulimba studio with more than three decades of bridal history</h2>
+        <p style="font-size: 17px; font-weight: 300; line-height: 1.78; margin: 0 0 24px; text-wrap: pretty;">The Bridehouse Bulimba carries forward a bridal tradition that began with Anne Bertossi, one of Australian bridal's respected names, more than thirty years ago. Gabrielle Spencer trained in fashion design, found her place in the bridal world, and was later mentored directly by Anne before taking over the ownership and creative direction of the studio.</p>
+        <p style="font-size: 17px; font-weight: 300; line-height: 1.78; margin: 0 0 40px; text-wrap: pretty;">The name has changed over the years — from Bertossi Brides to Paddington Weddings to The Bridehouse Bulimba — but the same hands-on, one-roof approach to design and alterations hasn't.</p>
+        <div style="display: flex; gap: 26px; align-items: center; font-family: 'Cormorant Garamond', serif; font-size: 19px; color: #8A8073; border-top: 1px solid #E8E1D7; padding-top: 28px;">
+          <span>Bertossi Brides</span><span style="color: #C0A276;">·</span><span>Paddington Weddings</span><span style="color: #C0A276;">·</span><span style="color: #2B2521;">The Bridehouse Bulimba</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background: #FCFAF7; padding: 0 0 120px;">
+    <div style="max-width: 1360px; margin: 0 auto; padding: 0 56px;">
+      <h2 style="font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: 44px; line-height: 1.13; color: #2B2521; margin: 0 0 48px;">Meet the team</h2>
+      <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 32px;">
+        <div>
+          <div style="height: 440px; margin-bottom: 24px;"><image-slot id="bh-team-1" shape="rect" placeholder="Gabrielle Spencer portrait"></image-slot></div>
+          <div style="font-family: 'Cormorant Garamond', serif; font-size: 28px; color: #2B2521;">Gabrielle Spencer</div>
+          <div style="font-size: 11.5px; letter-spacing: 0.2em; text-transform: uppercase; color: #9A7B4F; margin: 8px 0 14px;">Director and Designer</div>
+          <p style="font-size: 16px; font-weight: 300; line-height: 1.72; margin: 0;">Over a decade in bridal, trained in fashion design, mentored by Anne Bertossi. Leads every gown's creative direction from first sketch to final fitting.</p>
+        </div>
+        <div>
+          <div style="height: 440px; margin-bottom: 24px;"><image-slot id="bh-team-2" shape="rect" placeholder="Sharyn Price portrait"></image-slot></div>
+          <div style="font-family: 'Cormorant Garamond', serif; font-size: 28px; color: #2B2521;">Sharyn Price</div>
+          <div style="font-size: 11.5px; letter-spacing: 0.2em; text-transform: uppercase; color: #9A7B4F; margin: 8px 0 14px;">Boutique Manager</div>
+          <p style="font-size: 16px; font-weight: 300; line-height: 1.72; margin: 0;">The first voice you'll hear on the phone and the person making sure every appointment and detail runs on time.</p>
+        </div>
+        <div>
+          <div style="height: 440px; margin-bottom: 24px;"><image-slot id="bh-team-3" shape="rect" placeholder="Anna Edmonds portrait"></image-slot></div>
+          <div style="font-family: 'Cormorant Garamond', serif; font-size: 28px; color: #2B2521;">Anna Edmonds</div>
+          <div style="font-size: 11.5px; letter-spacing: 0.2em; text-transform: uppercase; color: #9A7B4F; margin: 8px 0 14px;">Head of Alterations</div>
+          <p style="font-size: 16px; font-weight: 300; line-height: 1.72; margin: 0;">30+ years of bridal alteration experience. You'll most likely meet her at your final fitting, where the fit gets finished properly.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background: #2B2521; color: #E5DED4; padding: 110px 0;">
+    <div style="max-width: 1360px; margin: 0 auto; padding: 0 56px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 96px; align-items: center;">
+      <div>
+        <div style="font-size: 11.5px; letter-spacing: 0.32em; text-transform: uppercase; color: #C0A276; margin-bottom: 24px;">Visit the studio</div>
+        <h2 style="font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: 46px; line-height: 1.13; color: #FCFAF7; margin: 0 0 26px; text-wrap: pretty;">Based in Bulimba, welcoming brides from across Brisbane and beyond</h2>
+        <p style="font-size: 17px; font-weight: 300; line-height: 1.78; color: #CFC6B9; margin: 0 0 34px;">Our studio is at 4/37 Oxford St, Bulimba QLD 4171, and we welcome brides travelling in from right across Brisbane and South East Queensland.</p>
+        <div style="display: flex; gap: 18px;">
+          <a href="#book" style="background: #FCFAF7; color: #2B2521; padding: 17px 32px; font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase;" style-hover="background: #C0A276;">Get directions</a>
+          <a href="#book" style="border: 1px solid #6B6055; color: #E5DED4; padding: 16px 30px; font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase;" style-hover="border-color: #C0A276;">Book my consultation</a>
+        </div>
+      </div>
+      <div style="height: 400px;"><image-slot id="bh-studio" shape="rect" placeholder="Shopfront on Oxford St, Bulimba"></image-slot></div>
+    </div>
+  </section>
+
+  <section style="background: #FCFAF7; padding: 120px 0;">
+    <div style="max-width: 1360px; margin: 0 auto; padding: 0 56px;">
+      <div style="max-width: 680px; margin-bottom: 56px;">
+        <div style="font-size: 11.5px; letter-spacing: 0.32em; text-transform: uppercase; color: #9A7B4F; margin-bottom: 24px;">The difference</div>
+        <h2 style="font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: 48px; line-height: 1.13; color: #2B2521; margin: 0;">Why brides choose us</h2>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1px; background: #E8E1D7; border: 1px solid #E8E1D7;">
+        <sc-for list="{{ reasons }}" as="r" hint-placeholder-count="6">
+          <div style="background: #FCFAF7; padding: 44px 40px;">
+            <div style="font-family: 'Cormorant Garamond', serif; font-size: 20px; color: #C0A276; margin-bottom: 20px;">{{ r.num }}</div>
+            <div style="font-family: 'Cormorant Garamond', serif; font-size: 25px; line-height: 1.3; color: #2B2521; margin-bottom: 14px;">{{ r.title }}</div>
+            <p style="font-size: 15.5px; font-weight: 300; line-height: 1.72; margin: 0;">{{ r.body }}</p>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section style="background: #F6F2EC; padding: 120px 0;">
+    <div style="max-width: 1360px; margin: 0 auto; padding: 0 56px;">
+      <div style="max-width: 680px; margin-bottom: 60px;">
+        <div style="font-size: 11.5px; letter-spacing: 0.32em; text-transform: uppercase; color: #9A7B4F; margin-bottom: 24px;">The process</div>
+        <h2 style="font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: 48px; line-height: 1.13; color: #2B2521; margin: 0;">How it works</h2>
+      </div>
+      <div style="display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 28px;">
+        <sc-for list="{{ steps }}" as="st" hint-placeholder-count="5">
+          <div style="border-top: 2px solid #2B2521; padding-top: 24px;">
+            <div style="font-family: 'Cormorant Garamond', serif; font-size: 44px; color: #C0A276; line-height: 1; margin-bottom: 18px;">{{ st.num }}</div>
+            <div style="font-family: 'Cormorant Garamond', serif; font-size: 24px; color: #2B2521; margin-bottom: 12px; line-height: 1.25;">{{ st.title }}</div>
+            <p style="font-size: 15px; font-weight: 300; line-height: 1.7; margin: 0;">{{ st.body }}</p>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section style="background: #FCFAF7; padding: 120px 0;">
+    <div style="max-width: 1360px; margin: 0 auto; padding: 0 56px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 90px;">
+      <div>
+        <div style="font-size: 11.5px; letter-spacing: 0.32em; text-transform: uppercase; color: #9A7B4F; margin-bottom: 24px;">Pricing</div>
+        <h2 style="font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: 44px; line-height: 1.13; color: #2B2521; margin: 0 0 26px; text-wrap: pretty;">Pricing and what's included</h2>
+        <p style="font-size: 17px; font-weight: 300; line-height: 1.78; margin: 0 0 32px; text-wrap: pretty;">Our made-to-order gowns and couture commissions are priced individually, and the price of your gown includes ordering it to your closest sample size. Couture commissions with Gabrielle Spencer start from $6,000 AUD; final price depends on design and materials. A 50% deposit secures your order, with the balance invoiced before your gown arrives — payment plans are available. Alterations are quoted separately at your fitting, once we can see exactly what your gown needs. If your wedding is closer than our usual 10-month lead time, a rush order may be possible for a $250 fee, depending on the season.</p>
+        <div style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 24px; border-top: 1px solid #E8E1D7; padding-top: 28px;">
+          <div>
+            <div style="font-family: 'Cormorant Garamond', serif; font-size: 30px; color: #2B2521;">From $6,000</div>
+            <div style="font-size: 13px; font-weight: 300; color: #736A5E; margin-top: 6px;">Couture commissions, AUD</div>
+          </div>
+          <div>
+            <div style="font-family: 'Cormorant Garamond', serif; font-size: 30px; color: #2B2521;">50% / 50%</div>
+            <div style="font-size: 13px; font-weight: 300; color: #736A5E; margin-top: 6px;">Deposit at order, balance before arrival</div>
+          </div>
+        </div>
+      </div>
+      <div style="background: #F6F2EC; padding: 52px 48px; align-self: start;">
+        <div style="font-size: 11.5px; letter-spacing: 0.32em; text-transform: uppercase; color: #9A7B4F; margin-bottom: 24px;">Peace of mind</div>
+        <h2 style="font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: 40px; line-height: 1.15; color: #2B2521; margin: 0 0 24px;">Try before you commit</h2>
+        <p style="font-size: 16.5px; font-weight: 300; line-height: 1.78; margin: 0 0 32px; text-wrap: pretty;">Every bridal consultation is complimentary and comes with no obligation to book anything on the day. Once you've chosen your gown, you have a 7-day cooling-off period to be certain. We can't offer returns or exchanges on a made-to-order gown once it's in production, since it's cut specifically for you — which is exactly why we build in the cooling-off period beforehand.</p>
+        <div style="display: flex; gap: 32px; border-top: 1px solid #E0D8CC; padding-top: 26px;">
+          <div style="flex: 1;">
+            <div style="font-family: 'Cormorant Garamond', serif; font-size: 30px; color: #2B2521;">Free</div>
+            <div style="font-size: 13px; font-weight: 300; color: #736A5E; margin-top: 6px;">Every consultation, no obligation</div>
+          </div>
+          <div style="flex: 1;">
+            <div style="font-family: 'Cormorant Garamond', serif; font-size: 30px; color: #2B2521;">7 days</div>
+            <div style="font-size: 13px; font-weight: 300; color: #736A5E; margin-top: 6px;">Cooling-off period on your gown choice</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section style="background: #F6F2EC; padding: 120px 0;">
+    <div style="max-width: 1180px; margin: 0 auto; padding: 0 56px;">
+      <div style="max-width: 680px; margin-bottom: 52px;">
+        <div style="font-size: 11.5px; letter-spacing: 0.32em; text-transform: uppercase; color: #9A7B4F; margin-bottom: 24px;">Comparison</div>
+        <h2 style="font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: 48px; line-height: 1.13; color: #2B2521; margin: 0;">How we compare</h2>
+      </div>
+      <table>
+        <thead>
+          <tr>
+            <th style="text-align: left; padding: 0 24px 20px 0; width: 26%;"></th>
+            <th style="text-align: left; padding: 0 24px 20px; font-size: 11.5px; font-weight: 400; letter-spacing: 0.18em; text-transform: uppercase; color: #8A8073; border-bottom: 1px solid #D8CFC2;">Large bridal warehouse</th>
+            <th style="text-align: left; padding: 0 24px 20px; font-size: 11.5px; font-weight: 400; letter-spacing: 0.18em; text-transform: uppercase; color: #8A8073; border-bottom: 1px solid #D8CFC2;">Buying online / overseas</th>
+            <th style="text-align: left; padding: 0 24px 20px; font-size: 11.5px; font-weight: 400; letter-spacing: 0.18em; text-transform: uppercase; color: #2B2521; border-bottom: 2px solid #2B2521;">The Bridehouse Bulimba</th>
+          </tr>
+        </thead>
+        <tbody>
+          <sc-for list="{{ compare }}" as="c" hint-placeholder-count="5">
+            <tr>
+              <td style="padding: 22px 24px 22px 0; font-size: 15.5px; color: #2B2521; border-bottom: 1px solid #E4DCD0;">{{ c.label }}</td>
+              <td style="padding: 22px 24px; font-size: 15.5px; font-weight: 300; color: #8A8073; border-bottom: 1px solid #E4DCD0;">{{ c.a }}</td>
+              <td style="padding: 22px 24px; font-size: 15.5px; font-weight: 300; color: #8A8073; border-bottom: 1px solid #E4DCD0;">{{ c.b }}</td>
+              <td style="padding: 22px 24px; font-size: 15.5px; color: #2B2521; border-bottom: 1px solid #E4DCD0; background: #FCFAF7;">{{ c.c }}</td>
+            </tr>
+          </sc-for>
+        </tbody>
+      </table>
+      <p style="font-size: 16px; font-weight: 300; line-height: 1.75; margin: 36px 0 0; max-width: 780px; font-style: italic; color: #736A5E;">Worth saying plainly: a warehouse or an overseas retailer will usually beat us on price alone. What you're paying for here is the same team designing, fitting and finishing your dress from start to end.</p>
+    </div>
+  </section>
+
+  <section id="faq" style="background: #FCFAF7; padding: 120px 0;">
+    <div style="max-width: 1360px; margin: 0 auto; padding: 0 56px; display: grid; grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr); gap: 90px;">
+      <div style="position: sticky; top: 132px; align-self: start;">
+        <div style="font-size: 11.5px; letter-spacing: 0.32em; text-transform: uppercase; color: #9A7B4F; margin-bottom: 24px;">Questions</div>
+        <h2 style="font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: 46px; line-height: 1.13; color: #2B2521; margin: 0 0 22px; text-wrap: pretty;">Before you book, in your own words</h2>
+        <p style="font-size: 16.5px; font-weight: 300; line-height: 1.75; margin: 0 0 30px;">Still unsure? Call us on <a href="tel:0721459087" style="color: #2B2521; border-bottom: 1px solid #C9BDAC;">(07) 2145 9087</a> — we'd rather answer it now than have you wonder.</p>
+        <div style="height: 300px;"><image-slot id="bh-faq" shape="rect" placeholder="Consultation moment — bride and stylist"></image-slot></div>
+      </div>
+      <div>
+        <div style="display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 24px; margin-bottom: 56px;">
+          <sc-for list="{{ objections }}" as="o" hint-placeholder-count="4">
+            <div style="background: #F6F2EC; padding: 34px 32px;">
+              <div style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 22px; line-height: 1.35; color: #2B2521; margin-bottom: 14px;">{{ o.q }}</div>
+              <p style="font-size: 15.5px; font-weight: 300; line-height: 1.72; margin: 0;">{{ o.a }}</p>
+            </div>
+          </sc-for>
+        </div>
+        <div style="font-size: 11.5px; letter-spacing: 0.32em; text-transform: uppercase; color: #9A7B4F; margin-bottom: 22px;">Frequently asked questions</div>
+        <sc-for list="{{ faqs }}" as="f" hint-placeholder-count="10">
+          <details style="border-bottom: 1px solid #E8E1D7;">
+            <summary style="padding: 24px 0; display: flex; justify-content: space-between; align-items: center; gap: 24px;">
+              <span style="font-family: 'Cormorant Garamond', serif; font-size: 24px; color: #2B2521; line-height: 1.3;">{{ f.q }}</span>
+              <span class="plus" style="font-size: 22px; color: #9A7B4F; font-weight: 300; transition: transform 0.25s ease; flex-shrink: 0;">+</span>
+            </summary>
+            <p style="font-size: 16.5px; font-weight: 300; line-height: 1.75; margin: 0 0 26px; max-width: 640px;">{{ f.a }}</p>
+          </details>
+        </sc-for>
+      </div>
+    </div>
+  </section>
+
+  <section id="book" style="background: #2B2521; color: #E5DED4; padding: 130px 0; position: relative; overflow: hidden;">
+    <div style="max-width: 1360px; margin: 0 auto; padding: 0 56px; display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr); gap: 90px; align-items: center;">
+      <div>
+        <div style="font-size: 11.5px; letter-spacing: 0.32em; text-transform: uppercase; color: #C0A276; margin-bottom: 28px;">Book your appointment</div>
+        <h2 style="font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: 60px; line-height: 1.08; color: #FCFAF7; margin: 0 0 26px; text-wrap: pretty;">Let's find your dress, or fix the one you already have</h2>
+        <p style="font-size: 18px; font-weight: 300; line-height: 1.75; color: #CFC6B9; margin: 0 0 40px; max-width: 560px;">Book a complimentary, no-obligation consultation with our Bulimba studio — for a new gown, alterations, customisation, or a couture commission.</p>
+        <div style="display: flex; gap: 18px; align-items: center; margin-bottom: 34px;">
+          <a href="#book" style="background: #FCFAF7; color: #2B2521; padding: 20px 40px; font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase;" style-hover="background: #C0A276;">Book my bridal consultation</a>
+          <a href="#book" style="border: 1px solid #6B6055; color: #E5DED4; padding: 19px 34px; font-size: 12px; letter-spacing: 0.22em; text-transform: uppercase;" style-hover="border-color: #C0A276;">Book an alteration consultation</a>
+        </div>
+        <div style="font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: #9A8F82; margin-bottom: 26px;">30+ years of alterations experience · Family-owned, Bulimba</div>
+        <p style="font-size: 15.5px; font-weight: 300; line-height: 1.7; color: #CFC6B9; margin: 0 0 18px;">We'll be in touch within one business day to confirm your appointment time.</p>
+        <p style="font-size: 15.5px; font-weight: 300; line-height: 1.7; color: #C0A276; margin: 0; border-left: 1px solid #574F46; padding-left: 20px;">P.S. If your wedding is closer than 10 months away, call us before you assume it's too late — <a href="tel:0721459087" style="color: #FCFAF7;">(07) 2145 9087</a>.</p>
+      </div>
+      <div style="height: 560px;"><image-slot id="bh-cta" shape="rect" placeholder="Closing image — bride on the day"></image-slot></div>
+    </div>
+  </section>
+
+  <footer style="background: #FCFAF7; padding: 90px 0 40px;">
+    <div style="max-width: 1360px; margin: 0 auto; padding: 0 56px;">
+      <div style="display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr); gap: 56px; padding-bottom: 60px; border-bottom: 1px solid #E8E1D7;">
+        <div>
+          <div style="font-family: 'Cormorant Garamond', serif; font-size: 26px; letter-spacing: 0.2em; text-transform: uppercase; color: #2B2521; line-height: 1;">The Bridehouse</div>
+          <div style="font-size: 9.5px; letter-spacing: 0.44em; text-transform: uppercase; color: #9A7B4F; margin: 7px 0 26px;">Bulimba</div>
+          <p style="font-size: 15px; font-weight: 300; line-height: 1.7; margin: 0 0 18px;">4/37 Oxford St, Bulimba QLD 4171, Australia</p>
+          <div style="font-size: 15px; font-weight: 300; line-height: 1.9;">
+            <div><a href="tel:0721459087" style="color: #5E564D;">(07) 2145 9087</a></div>
+            <div><a href="tel:0403199339" style="color: #5E564D;">0403 199 339</a></div>
+            <div><a href="mailto:gabrielle@thebridehouse.com.au" style="color: #5E564D;">gabrielle@thebridehouse.com.au</a></div>
+            <div><a href="mailto:hello@thebridehouse.com.au" style="color: #5E564D;">hello@thebridehouse.com.au</a></div>
+          </div>
+        </div>
+        <div>
+          <div style="font-size: 11px; letter-spacing: 0.28em; text-transform: uppercase; color: #A29684; margin-bottom: 20px;">Explore</div>
+          <div style="display: flex; flex-direction: column; gap: 11px; font-size: 15px; font-weight: 300;">
+            <a href="#collection" style="color: #5E564D;">Wedding Dresses</a>
+            <a href="#services" style="color: #5E564D;">Bridal Alterations</a>
+            <a href="#services" style="color: #5E564D;">Couture</a>
+            <a href="#services" style="color: #5E564D;">Accessories</a>
+          </div>
+        </div>
+        <div>
+          <div style="font-size: 11px; letter-spacing: 0.28em; text-transform: uppercase; color: #A29684; margin-bottom: 20px;">Studio</div>
+          <div style="display: flex; flex-direction: column; gap: 11px; font-size: 15px; font-weight: 300;">
+            <a href="#faq" style="color: #5E564D;">FAQ</a>
+            <a href="#story" style="color: #5E564D;">Journal</a>
+            <a href="#story" style="color: #5E564D;">About Us</a>
+            <a href="#book" style="color: #5E564D;">Contact</a>
+            <a href="#book" style="color: #5E564D;">Privacy Policy</a>
+          </div>
+        </div>
+        <div>
+          <div style="font-size: 11px; letter-spacing: 0.28em; text-transform: uppercase; color: #A29684; margin-bottom: 20px;">Hours — by appointment</div>
+          <div style="font-size: 15px; font-weight: 300; line-height: 1.95; color: #5E564D;">
+            <div>Tuesday–Friday · 9am–5pm</div>
+            <div>Thursday · 9am–8pm</div>
+            <div>Saturday · 9am–3pm</div>
+          </div>
+          <div style="display: flex; gap: 18px; margin-top: 26px; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase;">
+            <a href="#book" style="color: #5E564D;">Facebook</a>
+            <a href="#book" style="color: #5E564D;">Instagram</a>
+            <a href="#book" style="color: #5E564D;">Pinterest</a>
+            <a href="#book" style="color: #5E564D;">TikTok</a>
+          </div>
+        </div>
+      </div>
+      <div style="padding-top: 28px; display: flex; justify-content: space-between; font-size: 12.5px; font-weight: 300; color: #A29684;">
+        <div>© 2026 The Bridehouse Bulimba. Family-owned and operated.</div>
+        <div>Wedding dresses Brisbane · Bridal alterations Bulimba</div>
+      </div>
+    </div>
+  </footer>
+
+  <div ref="{{ barRef }}" style="position: fixed; left: 0; bottom: 0; z-index: 80; width: 100%; min-width: 1440px; background: #2B2521; color: #E5DED4; transform: translateY(110%); transition: transform 0.4s cubic-bezier(0.4,0,0.2,1); box-shadow: 0 -12px 40px rgba(43,37,33,0.16);">
+    <div style="max-width: 1360px; margin: 0 auto; padding: 16px 56px; display: flex; align-items: center; justify-content: space-between; gap: 32px;">
+      <div style="display: flex; align-items: baseline; gap: 20px;">
+        <div style="font-family: 'Cormorant Garamond', serif; font-size: 21px; letter-spacing: 0.16em; text-transform: uppercase; color: #FCFAF7;">The Bridehouse</div>
+        <div style="font-size: 13px; font-weight: 300; color: #CFC6B9;">Complimentary, no-obligation consultations · By appointment, Bulimba</div>
+      </div>
+      <div style="display: flex; gap: 14px; align-items: center;">
+        <a href="tel:0721459087" style="font-size: 12px; letter-spacing: 0.16em; color: #E5DED4; white-space: nowrap;">(07) 2145 9087</a>
+        <a href="#book" style="border: 1px solid #6B6055; color: #E5DED4; padding: 12px 22px; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; white-space: nowrap;" style-hover="border-color: #C0A276;">Alterations</a>
+        <a href="#book" style="background: #FCFAF7; color: #2B2521; padding: 13px 26px; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; white-space: nowrap;" style-hover="background: #C0A276;">Book my bridal consultation</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  constructor(props) {
+    super(props);
+    this.barRef = React.createRef();
+    this.onScroll = this.onScroll.bind(this);
+  }
+  componentDidMount() {
+    this._sc = document.scrollingElement || document.documentElement;
+    window.addEventListener('scroll', this.onScroll, { passive: true });
+    this.onScroll();
+  }
+  componentWillUnmount() { window.removeEventListener('scroll', this.onScroll); }
+  onScroll() {
+    const el = this.barRef.current;
+    if (!el) return;
+    const y = window.scrollY || this._sc.scrollTop || 0;
+    const max = (this._sc.scrollHeight || 0) - window.innerHeight;
+    const show = y > 900 && y < max - 700;
+    el.style.transform = show ? 'translateY(0)' : 'translateY(110%)';
+  }
+  renderVals() {
+    return {
+      barRef: this.barRef,
+      silhouettes: [
+        { id: 'bh-sil-aline', name: 'A-line' },
+        { id: 'bh-sil-ball', name: 'Ballgown' },
+        { id: 'bh-sil-backless', name: 'Backless' },
+        { id: 'bh-sil-basque', name: 'Basque waist' },
+        { id: 'bh-sil-drop', name: 'Drop waist' },
+        { id: 'bh-sil-classic', name: 'Classic' },
+        { id: 'bh-sil-ots', name: 'Off-the-shoulder' },
+        { id: 'bh-sil-princess', name: 'Princess' },
+        { id: 'bh-sil-corset', name: 'Corset' },
+        { id: 'bh-sil-floral', name: 'Floral' }
+      ],
+      gowns: [
+        { id: 'bh-gown-christie', name: 'Christie', detail: 'Lace · A-line' },
+        { id: 'bh-gown-chloe', name: 'Chloe', detail: 'Crepe · Classic' },
+        { id: 'bh-gown-cilia', name: 'Cilia', detail: 'Beaded · Corset' },
+        { id: 'bh-gown-anna', name: 'Anna', detail: 'Satin · Basque waist' },
+        { id: 'bh-gown-louisa', name: 'Louisa', detail: 'Tulle · Ballgown' },
+        { id: 'bh-gown-felicity', name: 'Felicity', detail: 'Lace · Off-the-shoulder' },
+        { id: 'bh-gown-7', name: 'Eloise', detail: 'Crepe · Backless' },
+        { id: 'bh-gown-8', name: 'Margot', detail: 'Satin · Drop waist' }
+      ],
+      reasons: [
+        { num: '01', title: 'Our design, our pattern', body: 'Every gown is our own design, and we own the pattern — so that changing a neckline, sleeve or fabric is a conversation, not a special order sent overseas.' },
+        { num: '02', title: 'One roof, one team', body: 'Styling and alterations happen under one roof — so that nobody hands your dress off between two businesses who have never spoken to each other.' },
+        { num: '03', title: 'Complimentary consultations', body: 'Complimentary, no-obligation consultations — so that you can try styles on honestly before you commit to anything.' },
+        { num: '04', title: 'Gowns we did not sell', body: 'We alter gowns we did not sell, including second-hand dresses — so that buying elsewhere does not shut the door on expert fitting.' },
+        { num: '05', title: 'Upfront on timing', body: 'We are upfront about lead times and rush fees — so that you know exactly where you stand, even if your wedding is close.' },
+        { num: '06', title: '7-day cooling-off', body: 'A 7-day cooling-off period on your gown choice — so that a big decision does not have to feel final the moment you sign.' }
+      ],
+      steps: [
+        { num: '01', title: 'Book your consultation', body: 'Online or by phone. Takes 2 minutes.' },
+        { num: '02', title: 'Try styles on, honestly', body: 'A one-hour, one-on-one appointment for up to five guests. No pressure to decide on the day.' },
+        { num: '03', title: 'Order and design', body: 'Choose your gown or start a couture commission; 50% deposit to begin. Typically 10 months from order to wedding day.' },
+        { num: '04', title: 'Alterations, on-site', body: 'Fitted and finished by the same studio, in the same workroom. Complimentary alteration consultation.' },
+        { num: '05', title: 'Final fitting, collect your gown', body: 'Ready for the day itself. Balance due before collection.' }
+      ],
+      compare: [
+        { label: 'Personal styling advice', a: 'Limited, high staff turnover', b: 'None', c: 'One-on-one, by appointment' },
+        { label: 'Alterations if you didn\u2019t buy here', a: 'Rarely offered', b: 'Not offered', c: 'Yes — complimentary consultation' },
+        { label: 'Who alters your gown', a: 'Outsourced', b: 'Not available', c: 'The same studio that designed it' },
+        { label: 'Customisation', a: 'Usually not possible', b: 'Not possible', c: 'Yes — we own the pattern' },
+        { label: 'Lead time flexibility', a: 'Fixed by supplier', b: 'Fixed, long shipping', c: '10 months typical; rush sometimes possible' }
+      ],
+      objections: [
+        { q: '\u201CWhat if I feel pressured to buy something?\u201D', a: 'You won\u2019t. Every consultation is complimentary and there\u2019s no obligation to book anything on the day.' },
+        { q: '\u201CWhat if my dress came from somewhere else — will I be judged?\u201D', a: 'No. Our alterations team fits gowns we\u2019ve never sold as often as ones we have, including second-hand dresses.' },
+        { q: '\u201CWhat if it\u2019s too late for my wedding date?\u201D', a: 'Call us before you assume that. We typically need 10 months, but rush orders are sometimes possible for a fee depending on the season.' },
+        { q: '\u201CWhat if I can\u2019t afford couture or a made-to-order gown?\u201D', a: 'We\u2019ll tell you honestly at the consultation — we\u2019d rather that than have you book in for nothing.' }
+      ],
+      faqs: [
+        { q: 'Do I need an appointment, or can I just drop in?', a: 'Bookings are essential — we give each bride our full attention for the hour, so walk-ins aren\u2019t possible.' },
+        { q: 'How long do appointments run?', a: 'One hour, with time to try styles on and get a quote before you leave.' },
+        { q: 'How many people can I bring?', a: 'Up to five guests.' },
+        { q: 'What sample sizes do you carry?', a: '8–16, and we style every shape and size regardless of sample size on the rack.' },
+        { q: 'How far ahead should I book?', a: 'We generally need 10 months to order and alter a gown; rush orders are sometimes possible for a $250 fee.' },
+        { q: 'What\u2019s included in the price of the gown?', a: 'Ordering to your closest sample size — alterations are a separate, quoted service.' },
+        { q: 'What are your payment terms?', a: '50% deposit at order, 50% before the gown arrives, with payment plans available.' },
+        { q: 'Do you alter gowns I didn\u2019t buy here?', a: 'Yes, including second-hand dresses.' },
+        { q: 'What if I fall pregnant or my body changes before the wedding?', a: 'We\u2019ll work through the options honestly, though pregnancy can limit what\u2019s achievable depending on timing and gown style.' },
+        { q: 'Can I change my mind after ordering?', a: 'There\u2019s a 7-day cooling-off period; made-to-order gowns can\u2019t be returned or exchanged once production begins.' }
+      ]
+    };
+  }
+}
+</script>
+</body>
+</html>
