@@ -1,9 +1,11 @@
 ﻿{
-    "github_repository":  "",
+    "github_repository":  "https://github.com/teamranked/brisbaneweddingdresses-au",
     "name":  "brisbaneweddingdresses.au",
     "production_branch":  "main",
     "cloudflare_project":  "brisbaneweddingdresses-au",
     "created":  "2026-08-03",
     "slug":  "brisbaneweddingdresses-au",
-    "status":  "site-loaded"
+    "status":  "deployed",
+    "pages_url":  "https://brisbaneweddingdresses-au.pages.dev",
+    "custom_domain":  "https://brisbaneweddingdresses.au"
 }
