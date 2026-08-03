@@ -76,7 +76,7 @@ body {
     gap: 0 !important;
   }
 
-  #dc-root > div > div:first-child > div > div:last-child > a:not([href="#book"]) {
+  #dc-root > div > div:first-child > div > div:last-child > a:not([href="#book"]):not([href="#top"]) {
     display: none !important;
   }
 
@@ -310,7 +310,7 @@ body {
     gap: 0 !important;
   }
 
-  #dc-root > .sc-host > div[data-dc-tpl] > div:first-child > div:last-child > a:not([href="#book"]) {
+  #dc-root > .sc-host > div[data-dc-tpl] > div:first-child > div:last-child > a:not([href="#book"]):not([href="#top"]) {
     display: none !important;
   }
 
@@ -400,7 +400,7 @@ body {
     gap: 0 !important;
   }
 
-  #dc-root > .sc-host > div > div:first-child > div:first-child > div:last-child > a:not([href="#book"]) {
+  #dc-root > .sc-host > div > div:first-child > div:first-child > div:last-child > a:not([href="#book"]):not([href="#top"]) {
     display: none !important;
   }
 
@@ -423,4 +423,5 @@ body {
     font-size: 16px !important;
   }
 }
+
 
