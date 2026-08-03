@@ -338,3 +338,73 @@ body {
   }
 }
 
+/* Final header geometry: template > sticky wrapper > inner grid. */
+@media (max-width: 900px) {
+  #dc-root > .sc-host > div > div:first-child > div:first-child {
+    height: 72px !important;
+    min-height: 0 !important;
+    padding: 0 20px !important;
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) auto !important;
+    gap: 12px !important;
+    align-items: center !important;
+  }
+
+  #dc-root > .sc-host > div > div:first-child > div:first-child > nav {
+    display: none !important;
+  }
+
+  #dc-root > .sc-host > div > div:first-child > div:first-child > a[href="#top"] {
+    display: block !important;
+    grid-column: 1 !important;
+    grid-row: 1 !important;
+    justify-self: start !important;
+    text-align: left !important;
+  }
+
+  #dc-root > .sc-host > div > div:first-child > div:first-child > a[href="#top"] > div:first-child {
+    font-size: 18px !important;
+    letter-spacing: 0.14em !important;
+    line-height: 1 !important;
+    white-space: nowrap !important;
+  }
+
+  #dc-root > .sc-host > div > div:first-child > div:first-child > a[href="#top"] > div:last-child {
+    margin-top: 5px !important;
+    font-size: 7px !important;
+    letter-spacing: 0.27em !important;
+    white-space: nowrap !important;
+  }
+
+  #dc-root > .sc-host > div > div:first-child > div:first-child > div:last-child {
+    grid-column: 2 !important;
+    grid-row: 1 !important;
+    display: flex !important;
+    justify-content: flex-end !important;
+    gap: 0 !important;
+  }
+
+  #dc-root > .sc-host > div > div:first-child > div:first-child > div:last-child > a:not([href="#book"]) {
+    display: none !important;
+  }
+
+  #dc-root > .sc-host > div > div:first-child > div:first-child > div:last-child > a[href="#book"] {
+    display: inline-block !important;
+    padding: 11px 14px !important;
+    font-size: 9px !important;
+    letter-spacing: 0.18em !important;
+    white-space: nowrap !important;
+  }
+}
+
+@media (max-width: 600px) {
+  #dc-root > .sc-host > div > div:first-child > div:first-child {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  #dc-root > .sc-host > div > div:first-child > div:first-child > a[href="#top"] > div:first-child {
+    font-size: 16px !important;
+  }
+}
+
