@@ -338,6 +338,13 @@ body {
   }
 }
 
+@media (max-width: 900px) {
+  /* There is one brand link on the page; keep it visible in the mobile bar. */
+  #dc-root a[href="#top"] {
+    display: block !important;
+  }
+}
+
 /* Final header geometry: template > sticky wrapper > inner grid. */
 @media (max-width: 900px) {
   #dc-root > .sc-host > div > div:first-child > div:first-child {
