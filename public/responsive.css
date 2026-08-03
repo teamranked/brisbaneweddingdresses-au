@@ -348,6 +348,10 @@ body {
   #dc-root > div > div:first-child > div > a[href="#top"] {
     display: block !important;
   }
+
+  #dc-root > div > div:first-child > div > div:last-child > a[href="#top"] {
+    display: block !important;
+  }
 }
 
 /* Final header geometry: template > sticky wrapper > inner grid. */
